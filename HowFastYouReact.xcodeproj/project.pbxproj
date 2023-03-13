@@ -7,15 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35FBCB95E035C8FA9C568A03 /* Pods_HowFastYouReactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39D809C4E8B262C64BC63F9 /* Pods_HowFastYouReactTests.framework */; };
 		5EF3C1B729BEBBFB0033CF32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C1B629BEBBFB0033CF32 /* AppDelegate.swift */; };
 		5EF3C1B929BEBBFB0033CF32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C1B829BEBBFB0033CF32 /* SceneDelegate.swift */; };
-		5EF3C1BB29BEBBFB0033CF32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C1BA29BEBBFB0033CF32 /* ViewController.swift */; };
-		5EF3C1BE29BEBBFB0033CF32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C1BC29BEBBFB0033CF32 /* Main.storyboard */; };
+		5EF3C1BB29BEBBFB0033CF32 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C1BA29BEBBFB0033CF32 /* MainViewController.swift */; };
 		5EF3C1C029BEBC000033CF32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C1BF29BEBC000033CF32 /* Assets.xcassets */; };
 		5EF3C1C329BEBC000033CF32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C1C129BEBC000033CF32 /* LaunchScreen.storyboard */; };
 		5EF3C1CE29BEBC030033CF32 /* HowFastYouReactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C1CD29BEBC030033CF32 /* HowFastYouReactTests.swift */; };
 		5EF3C1D829BEBC030033CF32 /* HowFastYouReactUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C1D729BEBC030033CF32 /* HowFastYouReactUITests.swift */; };
 		5EF3C1DA29BEBC030033CF32 /* HowFastYouReactUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C1D929BEBC030033CF32 /* HowFastYouReactUITestsLaunchTests.swift */; };
+		5EF3C1ED29BEBFBE0033CF32 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C1EC29BEBFBE0033CF32 /* Protocol.swift */; };
+		5EF3C1F029BEC14D0033CF32 /* LogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C1EF29BEC14D0033CF32 /* LogHelper.swift */; };
+		5EF3C20629BED9720033CF32 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C1FD29BED9720033CF32 /* Pretendard-Regular.otf */; };
+		5EF3C20729BED9720033CF32 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C1FD29BED9720033CF32 /* Pretendard-Regular.otf */; };
+		5EF3C20829BED9720033CF32 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C1FD29BED9720033CF32 /* Pretendard-Regular.otf */; };
+		5EF3C20929BED9720033CF32 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C1FE29BED9720033CF32 /* Pretendard-Black.otf */; };
+		5EF3C20A29BED9720033CF32 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C1FE29BED9720033CF32 /* Pretendard-Black.otf */; };
+		5EF3C20B29BED9720033CF32 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C1FE29BED9720033CF32 /* Pretendard-Black.otf */; };
+		5EF3C20C29BED9720033CF32 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C1FF29BED9720033CF32 /* Pretendard-Medium.otf */; };
+		5EF3C20D29BED9720033CF32 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C1FF29BED9720033CF32 /* Pretendard-Medium.otf */; };
+		5EF3C20E29BED9720033CF32 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C1FF29BED9720033CF32 /* Pretendard-Medium.otf */; };
+		5EF3C20F29BED9720033CF32 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C20029BED9720033CF32 /* Pretendard-Light.otf */; };
+		5EF3C21029BED9720033CF32 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C20029BED9720033CF32 /* Pretendard-Light.otf */; };
+		5EF3C21129BED9720033CF32 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C20029BED9720033CF32 /* Pretendard-Light.otf */; };
+		5EF3C21229BED9720033CF32 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C20129BED9720033CF32 /* Pretendard-ExtraBold.otf */; };
+		5EF3C21329BED9720033CF32 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C20129BED9720033CF32 /* Pretendard-ExtraBold.otf */; };
+		5EF3C21429BED9720033CF32 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C20129BED9720033CF32 /* Pretendard-ExtraBold.otf */; };
+		5EF3C21529BED9720033CF32 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C20229BED9720033CF32 /* Pretendard-Bold.otf */; };
+		5EF3C21629BED9720033CF32 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C20229BED9720033CF32 /* Pretendard-Bold.otf */; };
+		5EF3C21729BED9720033CF32 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C20229BED9720033CF32 /* Pretendard-Bold.otf */; };
+		5EF3C21829BED9720033CF32 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C20329BED9720033CF32 /* Pretendard-Thin.otf */; };
+		5EF3C21929BED9720033CF32 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C20329BED9720033CF32 /* Pretendard-Thin.otf */; };
+		5EF3C21A29BED9720033CF32 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C20329BED9720033CF32 /* Pretendard-Thin.otf */; };
+		5EF3C21B29BED9720033CF32 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C20429BED9720033CF32 /* Pretendard-ExtraLight.otf */; };
+		5EF3C21C29BED9720033CF32 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C20429BED9720033CF32 /* Pretendard-ExtraLight.otf */; };
+		5EF3C21D29BED9720033CF32 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C20429BED9720033CF32 /* Pretendard-ExtraLight.otf */; };
+		5EF3C21E29BED9720033CF32 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C20529BED9720033CF32 /* Pretendard-SemiBold.otf */; };
+		5EF3C21F29BED9720033CF32 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C20529BED9720033CF32 /* Pretendard-SemiBold.otf */; };
+		5EF3C22029BED9720033CF32 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C20529BED9720033CF32 /* Pretendard-SemiBold.otf */; };
+		5EF3C22329BEDB1F0033CF32 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C22229BEDB1F0033CF32 /* FontManager.swift */; };
+		5EF3C22429BEDB1F0033CF32 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C22229BEDB1F0033CF32 /* FontManager.swift */; };
+		5EF3C22529BEDB1F0033CF32 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C22229BEDB1F0033CF32 /* FontManager.swift */; };
+		5EF3C22729BEDDB80033CF32 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C22629BEDDB80033CF32 /* MainViewModel.swift */; };
+		5EF3C22829BEDDB80033CF32 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C22629BEDDB80033CF32 /* MainViewModel.swift */; };
+		5EF3C22929BEDDB80033CF32 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C22629BEDDB80033CF32 /* MainViewModel.swift */; };
+		879C4E00CBB6206CC004037F /* Pods_HowFastYouReact_HowFastYouReactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C2C020F82B3F888B26A219 /* Pods_HowFastYouReact_HowFastYouReactUITests.framework */; };
+		E84BA306B94877AAB28954F2 /* Pods_HowFastYouReact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C962C0879946AA09D7A9A7A /* Pods_HowFastYouReact.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +73,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2532F3CB0576B3AF43575025 /* Pods-HowFastYouReact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReact.release.xcconfig"; path = "Target Support Files/Pods-HowFastYouReact/Pods-HowFastYouReact.release.xcconfig"; sourceTree = "<group>"; };
+		3B088D03F849B8470869221E /* Pods-HowFastYouReactTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReactTests.release.xcconfig"; path = "Target Support Files/Pods-HowFastYouReactTests/Pods-HowFastYouReactTests.release.xcconfig"; sourceTree = "<group>"; };
+		3B215020E7FCABE3B6B63342 /* Pods-HowFastYouReact-HowFastYouReactUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReact-HowFastYouReactUITests.debug.xcconfig"; path = "Target Support Files/Pods-HowFastYouReact-HowFastYouReactUITests/Pods-HowFastYouReact-HowFastYouReactUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4C962C0879946AA09D7A9A7A /* Pods_HowFastYouReact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HowFastYouReact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF3C1B329BEBBFB0033CF32 /* HowFastYouReact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HowFastYouReact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF3C1B629BEBBFB0033CF32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EF3C1B829BEBBFB0033CF32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5EF3C1BA29BEBBFB0033CF32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5EF3C1BD29BEBBFB0033CF32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5EF3C1BA29BEBBFB0033CF32 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5EF3C1BF29BEBC000033CF32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EF3C1C229BEBC000033CF32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EF3C1C429BEBC000033CF32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +89,24 @@
 		5EF3C1D329BEBC030033CF32 /* HowFastYouReactUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HowFastYouReactUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF3C1D729BEBC030033CF32 /* HowFastYouReactUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowFastYouReactUITests.swift; sourceTree = "<group>"; };
 		5EF3C1D929BEBC030033CF32 /* HowFastYouReactUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowFastYouReactUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5EF3C1EC29BEBFBE0033CF32 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		5EF3C1EF29BEC14D0033CF32 /* LogHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogHelper.swift; sourceTree = "<group>"; };
+		5EF3C1FD29BED9720033CF32 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		5EF3C1FE29BED9720033CF32 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		5EF3C1FF29BED9720033CF32 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		5EF3C20029BED9720033CF32 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		5EF3C20129BED9720033CF32 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		5EF3C20229BED9720033CF32 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		5EF3C20329BED9720033CF32 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		5EF3C20429BED9720033CF32 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		5EF3C20529BED9720033CF32 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		5EF3C22229BEDB1F0033CF32 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		5EF3C22629BEDDB80033CF32 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		62C2C020F82B3F888B26A219 /* Pods_HowFastYouReact_HowFastYouReactUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HowFastYouReact_HowFastYouReactUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89D94067F6F72DB1F338E638 /* Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig"; path = "Target Support Files/Pods-HowFastYouReact-HowFastYouReactUITests/Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B39D809C4E8B262C64BC63F9 /* Pods_HowFastYouReactTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HowFastYouReactTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0851ECFA2F634F15A6C1D3E /* Pods-HowFastYouReact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReact.debug.xcconfig"; path = "Target Support Files/Pods-HowFastYouReact/Pods-HowFastYouReact.debug.xcconfig"; sourceTree = "<group>"; };
+		DEE1DA6BBFB22021DD53032B /* Pods-HowFastYouReactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReactTests.debug.xcconfig"; path = "Target Support Files/Pods-HowFastYouReactTests/Pods-HowFastYouReactTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E84BA306B94877AAB28954F2 /* Pods_HowFastYouReact.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35FBCB95E035C8FA9C568A03 /* Pods_HowFastYouReactTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				879C4E00CBB6206CC004037F /* Pods_HowFastYouReact_HowFastYouReactUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +144,8 @@
 				5EF3C1CC29BEBC030033CF32 /* HowFastYouReactTests */,
 				5EF3C1D629BEBC030033CF32 /* HowFastYouReactUITests */,
 				5EF3C1B429BEBBFB0033CF32 /* Products */,
+				6031D326F4985A5985466465 /* Pods */,
+				9261D9D84DBC2DC1E8696E64 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +162,14 @@
 		5EF3C1B529BEBBFB0033CF32 /* HowFastYouReact */ = {
 			isa = PBXGroup;
 			children = (
-				5EF3C1B629BEBBFB0033CF32 /* AppDelegate.swift */,
-				5EF3C1B829BEBBFB0033CF32 /* SceneDelegate.swift */,
-				5EF3C1BA29BEBBFB0033CF32 /* ViewController.swift */,
-				5EF3C1BC29BEBBFB0033CF32 /* Main.storyboard */,
-				5EF3C1BF29BEBC000033CF32 /* Assets.xcassets */,
-				5EF3C1C129BEBC000033CF32 /* LaunchScreen.storyboard */,
 				5EF3C1C429BEBC000033CF32 /* Info.plist */,
+				5EF3C1EB29BEBFB50033CF32 /* Protocol */,
+				5EF3C1E729BEBF4C0033CF32 /* Resource */,
+				5EF3C1E629BEBF110033CF32 /* AppDelegate */,
+				5EF3C1E829BEBF950033CF32 /* Model */,
+				5EF3C1E929BEBF9B0033CF32 /* View */,
+				5EF3C1EA29BEBF9F0033CF32 /* ViewModel */,
+				5EF3C1EE29BEC10F0033CF32 /* Helper */,
 			);
 			path = HowFastYouReact;
 			sourceTree = "<group>";
@@ -127,6 +191,113 @@
 			path = HowFastYouReactUITests;
 			sourceTree = "<group>";
 		};
+		5EF3C1E629BEBF110033CF32 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				5EF3C1B629BEBBFB0033CF32 /* AppDelegate.swift */,
+				5EF3C1B829BEBBFB0033CF32 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		5EF3C1E729BEBF4C0033CF32 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5EF3C1BF29BEBC000033CF32 /* Assets.xcassets */,
+				5EF3C1C129BEBC000033CF32 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		5EF3C1E829BEBF950033CF32 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5EF3C1E929BEBF9B0033CF32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5EF3C1BA29BEBBFB0033CF32 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5EF3C1EA29BEBF9F0033CF32 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5EF3C22629BEDDB80033CF32 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5EF3C1EB29BEBFB50033CF32 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				5EF3C1EC29BEBFBE0033CF32 /* Protocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		5EF3C1EE29BEC10F0033CF32 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				5EF3C1F529BEC2960033CF32 /* Log */,
+				5EF3C1FC29BED9720033CF32 /* Font */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		5EF3C1F529BEC2960033CF32 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				5EF3C1EF29BEC14D0033CF32 /* LogHelper.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		5EF3C1FC29BED9720033CF32 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				5EF3C22229BEDB1F0033CF32 /* FontManager.swift */,
+				5EF3C1FD29BED9720033CF32 /* Pretendard-Regular.otf */,
+				5EF3C1FE29BED9720033CF32 /* Pretendard-Black.otf */,
+				5EF3C1FF29BED9720033CF32 /* Pretendard-Medium.otf */,
+				5EF3C20029BED9720033CF32 /* Pretendard-Light.otf */,
+				5EF3C20129BED9720033CF32 /* Pretendard-ExtraBold.otf */,
+				5EF3C20229BED9720033CF32 /* Pretendard-Bold.otf */,
+				5EF3C20329BED9720033CF32 /* Pretendard-Thin.otf */,
+				5EF3C20429BED9720033CF32 /* Pretendard-ExtraLight.otf */,
+				5EF3C20529BED9720033CF32 /* Pretendard-SemiBold.otf */,
+			);
+			name = Font;
+			path = ../../../Summar/Summar/Helper/Font;
+			sourceTree = "<group>";
+		};
+		6031D326F4985A5985466465 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0851ECFA2F634F15A6C1D3E /* Pods-HowFastYouReact.debug.xcconfig */,
+				2532F3CB0576B3AF43575025 /* Pods-HowFastYouReact.release.xcconfig */,
+				3B215020E7FCABE3B6B63342 /* Pods-HowFastYouReact-HowFastYouReactUITests.debug.xcconfig */,
+				89D94067F6F72DB1F338E638 /* Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig */,
+				DEE1DA6BBFB22021DD53032B /* Pods-HowFastYouReactTests.debug.xcconfig */,
+				3B088D03F849B8470869221E /* Pods-HowFastYouReactTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9261D9D84DBC2DC1E8696E64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C962C0879946AA09D7A9A7A /* Pods_HowFastYouReact.framework */,
+				62C2C020F82B3F888B26A219 /* Pods_HowFastYouReact_HowFastYouReactUITests.framework */,
+				B39D809C4E8B262C64BC63F9 /* Pods_HowFastYouReactTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +305,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EF3C1DD29BEBC030033CF32 /* Build configuration list for PBXNativeTarget "HowFastYouReact" */;
 			buildPhases = (
+				AAC9DD933EF68F79A3152BDF /* [CP] Check Pods Manifest.lock */,
 				5EF3C1AF29BEBBFB0033CF32 /* Sources */,
 				5EF3C1B029BEBBFB0033CF32 /* Frameworks */,
 				5EF3C1B129BEBBFB0033CF32 /* Resources */,
+				673F315FF5FC7567505A5D9B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +324,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EF3C1E029BEBC030033CF32 /* Build configuration list for PBXNativeTarget "HowFastYouReactTests" */;
 			buildPhases = (
+				45DE67F959380DE79D15A635 /* [CP] Check Pods Manifest.lock */,
 				5EF3C1C529BEBC030033CF32 /* Sources */,
 				5EF3C1C629BEBC030033CF32 /* Frameworks */,
 				5EF3C1C729BEBC030033CF32 /* Resources */,
@@ -169,9 +343,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EF3C1E329BEBC030033CF32 /* Build configuration list for PBXNativeTarget "HowFastYouReactUITests" */;
 			buildPhases = (
+				E63C96258EE97F09ACE3531F /* [CP] Check Pods Manifest.lock */,
 				5EF3C1CF29BEBC030033CF32 /* Sources */,
 				5EF3C1D029BEBC030033CF32 /* Frameworks */,
 				5EF3C1D129BEBC030033CF32 /* Resources */,
+				87F1CA7067215B2BAAF55E8B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,9 +407,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF3C21E29BED9720033CF32 /* Pretendard-SemiBold.otf in Resources */,
 				5EF3C1C329BEBC000033CF32 /* LaunchScreen.storyboard in Resources */,
+				5EF3C21529BED9720033CF32 /* Pretendard-Bold.otf in Resources */,
+				5EF3C21B29BED9720033CF32 /* Pretendard-ExtraLight.otf in Resources */,
+				5EF3C20C29BED9720033CF32 /* Pretendard-Medium.otf in Resources */,
+				5EF3C21829BED9720033CF32 /* Pretendard-Thin.otf in Resources */,
+				5EF3C21229BED9720033CF32 /* Pretendard-ExtraBold.otf in Resources */,
+				5EF3C20629BED9720033CF32 /* Pretendard-Regular.otf in Resources */,
+				5EF3C20929BED9720033CF32 /* Pretendard-Black.otf in Resources */,
 				5EF3C1C029BEBC000033CF32 /* Assets.xcassets in Resources */,
-				5EF3C1BE29BEBBFB0033CF32 /* Main.storyboard in Resources */,
+				5EF3C20F29BED9720033CF32 /* Pretendard-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +425,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF3C20A29BED9720033CF32 /* Pretendard-Black.otf in Resources */,
+				5EF3C21629BED9720033CF32 /* Pretendard-Bold.otf in Resources */,
+				5EF3C21C29BED9720033CF32 /* Pretendard-ExtraLight.otf in Resources */,
+				5EF3C21929BED9720033CF32 /* Pretendard-Thin.otf in Resources */,
+				5EF3C21029BED9720033CF32 /* Pretendard-Light.otf in Resources */,
+				5EF3C21329BED9720033CF32 /* Pretendard-ExtraBold.otf in Resources */,
+				5EF3C21F29BED9720033CF32 /* Pretendard-SemiBold.otf in Resources */,
+				5EF3C20729BED9720033CF32 /* Pretendard-Regular.otf in Resources */,
+				5EF3C20D29BED9720033CF32 /* Pretendard-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,19 +441,135 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF3C20B29BED9720033CF32 /* Pretendard-Black.otf in Resources */,
+				5EF3C21729BED9720033CF32 /* Pretendard-Bold.otf in Resources */,
+				5EF3C21D29BED9720033CF32 /* Pretendard-ExtraLight.otf in Resources */,
+				5EF3C21A29BED9720033CF32 /* Pretendard-Thin.otf in Resources */,
+				5EF3C21129BED9720033CF32 /* Pretendard-Light.otf in Resources */,
+				5EF3C21429BED9720033CF32 /* Pretendard-ExtraBold.otf in Resources */,
+				5EF3C22029BED9720033CF32 /* Pretendard-SemiBold.otf in Resources */,
+				5EF3C20829BED9720033CF32 /* Pretendard-Regular.otf in Resources */,
+				5EF3C20E29BED9720033CF32 /* Pretendard-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45DE67F959380DE79D15A635 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HowFastYouReactTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		673F315FF5FC7567505A5D9B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HowFastYouReact/Pods-HowFastYouReact-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HowFastYouReact/Pods-HowFastYouReact-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HowFastYouReact/Pods-HowFastYouReact-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87F1CA7067215B2BAAF55E8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HowFastYouReact-HowFastYouReactUITests/Pods-HowFastYouReact-HowFastYouReactUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HowFastYouReact-HowFastYouReactUITests/Pods-HowFastYouReact-HowFastYouReactUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HowFastYouReact-HowFastYouReactUITests/Pods-HowFastYouReact-HowFastYouReactUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAC9DD933EF68F79A3152BDF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HowFastYouReact-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E63C96258EE97F09ACE3531F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HowFastYouReact-HowFastYouReactUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5EF3C1AF29BEBBFB0033CF32 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EF3C1BB29BEBBFB0033CF32 /* ViewController.swift in Sources */,
+				5EF3C22729BEDDB80033CF32 /* MainViewModel.swift in Sources */,
+				5EF3C1BB29BEBBFB0033CF32 /* MainViewController.swift in Sources */,
+				5EF3C1F029BEC14D0033CF32 /* LogHelper.swift in Sources */,
 				5EF3C1B729BEBBFB0033CF32 /* AppDelegate.swift in Sources */,
 				5EF3C1B929BEBBFB0033CF32 /* SceneDelegate.swift in Sources */,
+				5EF3C22329BEDB1F0033CF32 /* FontManager.swift in Sources */,
+				5EF3C1ED29BEBFBE0033CF32 /* Protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +577,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF3C22429BEDB1F0033CF32 /* FontManager.swift in Sources */,
 				5EF3C1CE29BEBC030033CF32 /* HowFastYouReactTests.swift in Sources */,
+				5EF3C22829BEDDB80033CF32 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +588,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EF3C1D829BEBC030033CF32 /* HowFastYouReactUITests.swift in Sources */,
+				5EF3C22529BEDB1F0033CF32 /* FontManager.swift in Sources */,
 				5EF3C1DA29BEBC030033CF32 /* HowFastYouReactUITestsLaunchTests.swift in Sources */,
+				5EF3C22929BEDDB80033CF32 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +610,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5EF3C1BC29BEBBFB0033CF32 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5EF3C1BD29BEBBFB0033CF32 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5EF3C1C129BEBC000033CF32 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -366,7 +671,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +725,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -432,6 +737,7 @@
 		};
 		5EF3C1DE29BEBC030033CF32 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0851ECFA2F634F15A6C1D3E /* Pods-HowFastYouReact.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -442,9 +748,10 @@
 				INFOPLIST_FILE = HowFastYouReact/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,6 +767,7 @@
 		};
 		5EF3C1DF29BEBC030033CF32 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2532F3CB0576B3AF43575025 /* Pods-HowFastYouReact.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -470,9 +778,10 @@
 				INFOPLIST_FILE = HowFastYouReact/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -488,6 +797,7 @@
 		};
 		5EF3C1E129BEBC030033CF32 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEE1DA6BBFB22021DD53032B /* Pods-HowFastYouReactTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +818,7 @@
 		};
 		5EF3C1E229BEBC030033CF32 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B088D03F849B8470869221E /* Pods-HowFastYouReactTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,6 +839,7 @@
 		};
 		5EF3C1E429BEBC030033CF32 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B215020E7FCABE3B6B63342 /* Pods-HowFastYouReact-HowFastYouReactUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -546,6 +858,7 @@
 		};
 		5EF3C1E529BEBC030033CF32 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89D94067F6F72DB1F338E638 /* Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
