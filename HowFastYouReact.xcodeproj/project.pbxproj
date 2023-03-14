@@ -52,6 +52,7 @@
 		5EF3C22929BEDDB80033CF32 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C22629BEDDB80033CF32 /* MainViewModel.swift */; };
 		61E1F8CF2A8C0F4B8F265D44 /* Pods_HowFastYouReact_HowFastYouReactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E07E77D1C595F3E3460F30 /* Pods_HowFastYouReact_HowFastYouReactUITests.framework */; };
 		A24BAC9B29C0A58500D96AC1 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24BAC9A29C0A58500D96AC1 /* FontManager.swift */; };
+		A24BAC9D29C0A6D400D96AC1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24BAC9C29C0A6D400D96AC1 /* ProfileViewController.swift */; };
 		F2B959B033A6D8FB9779EF7D /* Pods_HowFastYouReactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8A2EE42DA7941A850EABC0C /* Pods_HowFastYouReactTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +110,7 @@
 		7CCDCBC129ECCDC312FBA72B /* Pods-HowFastYouReactTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReactTests.release.xcconfig"; path = "Target Support Files/Pods-HowFastYouReactTests/Pods-HowFastYouReactTests.release.xcconfig"; sourceTree = "<group>"; };
 		A0D5AC37D5A3A87B7576DEA9 /* Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig"; path = "Target Support Files/Pods-HowFastYouReact-HowFastYouReactUITests/Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A24BAC9A29C0A58500D96AC1 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		A24BAC9C29C0A6D400D96AC1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C850BE3FD40005E5E97014B8 /* Pods_HowFastYouReact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HowFastYouReact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A2EE42DA7941A850EABC0C /* Pods_HowFastYouReactTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HowFastYouReactTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -251,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				5EF3C1BA29BEBBFB0033CF32 /* MainViewController.swift */,
+				A24BAC9C29C0A6D400D96AC1 /* ProfileViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				5EF3C1F029BEC14D0033CF32 /* LogHelper.swift in Sources */,
 				5EF3C1B729BEBBFB0033CF32 /* AppDelegate.swift in Sources */,
 				5EF3C1B929BEBBFB0033CF32 /* SceneDelegate.swift in Sources */,
+				A24BAC9D29C0A6D400D96AC1 /* ProfileViewController.swift in Sources */,
 				A24BAC9B29C0A58500D96AC1 /* FontManager.swift in Sources */,
 				5EF3C1ED29BEBFBE0033CF32 /* Protocol.swift in Sources */,
 			);

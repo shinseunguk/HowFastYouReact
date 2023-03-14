@@ -26,6 +26,7 @@ final class MainViewController: UIViewController, ViewAttribute {
     let fullCoverageButton = UIButton()
     lazy var questionMark = UIImageView().then {
         
+        $0.isUserInteractionEnabled = true
         $0.tintColor = .white
         $0.image = UIImage(systemName: "questionmark.app.fill")
         $0.addGestureRecognizer(tapGesture)
@@ -46,6 +47,12 @@ final class MainViewController: UIViewController, ViewAttribute {
         $0.sizeToFit()
         $0.textAlignment = .center
         $0.textColor = .white
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.isNavigationBarHidden = true
     }
 
     override func viewDidLoad() {
@@ -164,11 +171,13 @@ final class MainViewController: UIViewController, ViewAttribute {
         // MARK: - 물음표 터치
         tapGesture.rx.event
             .subscribe(onNext: { [weak self] _ in
-                // Tap 이벤트 처리 로직
-                print("물음표")
+                self?.goNextPage()
             })
             .disposed(by: disposeBag)
         
     }
-        
+    
+    func goNextPage() {
+        self.navigationController?.pushViewController(ProfileViewController(), animated: true)
+    }
 }
