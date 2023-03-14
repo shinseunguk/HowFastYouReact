@@ -21,9 +21,11 @@ final class MainViewController: UIViewController, ViewAttribute {
     var backgroundColor: UIColor = .systemGray
     var reactBool = false
     
-    lazy var fullCoverageButton = UIButton().then {
+    let fullCoverageButton = UIButton()
+    lazy var questionMark = UIImageView().then {
         
-        $0.backgroundColor = .systemGray
+        $0.tintColor = .white
+        $0.image = UIImage(systemName: "questionmark.app.fill")
     }
     lazy var promptLabel = UILabel().then {
         
@@ -55,12 +57,19 @@ final class MainViewController: UIViewController, ViewAttribute {
         
         self.view.addSubview(fullCoverageButton)
         
+        self.fullCoverageButton.addSubview(questionMark)
         self.fullCoverageButton.addSubview(promptLabel)
         self.fullCoverageButton.addSubview(timerLabel)
     }
     
     func setAttributes() {
         
+        questionMark.snp.makeConstraints {
+            
+            $0.width.height.equalTo(30)
+            $0.top.equalTo(self.view.safeAreaLayoutGuide).offset(20)
+            $0.right.equalTo(-20)
+        }
         fullCoverageButton.snp.makeConstraints {
             
             $0.edges.equalToSuperview()
