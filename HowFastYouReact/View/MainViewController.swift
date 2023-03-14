@@ -16,6 +16,8 @@ final class MainViewController: UIViewController, ViewAttribute {
     let viewModel = MainViewModel()
     let disposeBag = DisposeBag()
     let fontManager = FontManager.shared
+    
+    let tapGesture = UITapGestureRecognizer()
 
     var index = 1
     var backgroundColor: UIColor = .systemGray
@@ -26,6 +28,7 @@ final class MainViewController: UIViewController, ViewAttribute {
         
         $0.tintColor = .white
         $0.image = UIImage(systemName: "questionmark.app.fill")
+        $0.addGestureRecognizer(tapGesture)
     }
     lazy var promptLabel = UILabel().then {
         
@@ -156,6 +159,14 @@ final class MainViewController: UIViewController, ViewAttribute {
         viewModel.elapsedTime
             .map {"\(String(format: "%.2f", $0*1000))ms"}
             .bind(to: timerLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        // MARK: - 물음표 터치
+        tapGesture.rx.event
+            .subscribe(onNext: { [weak self] _ in
+                // Tap 이벤트 처리 로직
+                print("물음표")
+            })
             .disposed(by: disposeBag)
         
     }
