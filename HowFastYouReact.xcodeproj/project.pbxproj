@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0493525A6EC670548647AF5F /* Pods_HowFastYouReact_HowFastYouReactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AF364AA017970D9AB5B548 /* Pods_HowFastYouReact_HowFastYouReactUITests.framework */; };
+		58117C959EB86BBC3DB04DD9 /* Pods_HowFastYouReact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7D0C980054311283EDBC04 /* Pods_HowFastYouReact.framework */; };
 		5EC7779129C0278C009B7E44 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EC7779329C0278C009B7E44 /* Localizable.strings */; };
 		5EC7779829C02818009B7E44 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC7779729C02818009B7E44 /* String+Extension.swift */; };
 		5EF3C1B729BEBBFB0033CF32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C1B629BEBBFB0033CF32 /* AppDelegate.swift */; };
@@ -50,10 +50,10 @@
 		5EF3C22729BEDDB80033CF32 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C22629BEDDB80033CF32 /* MainViewModel.swift */; };
 		5EF3C22829BEDDB80033CF32 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C22629BEDDB80033CF32 /* MainViewModel.swift */; };
 		5EF3C22929BEDDB80033CF32 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C22629BEDDB80033CF32 /* MainViewModel.swift */; };
-		7F9F3AA3FC5581430FCD4F49 /* Pods_HowFastYouReact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 987115DB67A265B697DF5807 /* Pods_HowFastYouReact.framework */; };
-		891A3ED4C8C1C2EA7116F76A /* Pods_HowFastYouReactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F59D7BE9452FBAA7119E3A26 /* Pods_HowFastYouReactTests.framework */; };
+		841655EEEFAE9B11BB38C7F3 /* Pods_HowFastYouReact_HowFastYouReactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8318022AD69E89889B7BE11D /* Pods_HowFastYouReact_HowFastYouReactUITests.framework */; };
 		A24BAC9B29C0A58500D96AC1 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24BAC9A29C0A58500D96AC1 /* FontManager.swift */; };
 		A24BAC9D29C0A6D400D96AC1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24BAC9C29C0A6D400D96AC1 /* ProfileViewController.swift */; };
+		BE0FE1FC277AF7E3AF68E2F1 /* Pods_HowFastYouReactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D9856AB7883FC4A3B7F0985 /* Pods_HowFastYouReactTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +74,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0AA7F0FA46B3372771AEB501 /* Pods-HowFastYouReact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReact.debug.xcconfig"; path = "Target Support Files/Pods-HowFastYouReact/Pods-HowFastYouReact.debug.xcconfig"; sourceTree = "<group>"; };
+		0B7A4CFD54146AE3F835A512 /* Pods-HowFastYouReact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReact.release.xcconfig"; path = "Target Support Files/Pods-HowFastYouReact/Pods-HowFastYouReact.release.xcconfig"; sourceTree = "<group>"; };
+		442068AFCD8A3A28FDBE5BBE /* Pods-HowFastYouReact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReact.debug.xcconfig"; path = "Target Support Files/Pods-HowFastYouReact/Pods-HowFastYouReact.debug.xcconfig"; sourceTree = "<group>"; };
+		5DCCBE14B450B957043E0C58 /* Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig"; path = "Target Support Files/Pods-HowFastYouReact-HowFastYouReactUITests/Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5EC7779229C0278C009B7E44 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5EC7779429C027A2009B7E44 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5EC7779529C027AC009B7E44 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -103,16 +105,14 @@
 		5EF3C20429BED9720033CF32 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
 		5EF3C20529BED9720033CF32 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		5EF3C22629BEDDB80033CF32 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		5FABF905EA9CC89ABBAA0179 /* Pods-HowFastYouReactTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReactTests.release.xcconfig"; path = "Target Support Files/Pods-HowFastYouReactTests/Pods-HowFastYouReactTests.release.xcconfig"; sourceTree = "<group>"; };
-		6B28191501666A002598A2EB /* Pods-HowFastYouReact-HowFastYouReactUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReact-HowFastYouReactUITests.debug.xcconfig"; path = "Target Support Files/Pods-HowFastYouReact-HowFastYouReactUITests/Pods-HowFastYouReact-HowFastYouReactUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		987115DB67A265B697DF5807 /* Pods_HowFastYouReact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HowFastYouReact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CAA5FFE9C83166DA4769895 /* Pods-HowFastYouReact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReact.release.xcconfig"; path = "Target Support Files/Pods-HowFastYouReact/Pods-HowFastYouReact.release.xcconfig"; sourceTree = "<group>"; };
+		6D9856AB7883FC4A3B7F0985 /* Pods_HowFastYouReactTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HowFastYouReactTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FBC9847F3427AF2C8F11D6F /* Pods-HowFastYouReactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReactTests.debug.xcconfig"; path = "Target Support Files/Pods-HowFastYouReactTests/Pods-HowFastYouReactTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7C7D0C980054311283EDBC04 /* Pods_HowFastYouReact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HowFastYouReact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8318022AD69E89889B7BE11D /* Pods_HowFastYouReact_HowFastYouReactUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HowFastYouReact_HowFastYouReactUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A24BAC9A29C0A58500D96AC1 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		A24BAC9C29C0A6D400D96AC1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		AEBCFF32E7814D55E5C8A896 /* Pods-HowFastYouReactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReactTests.debug.xcconfig"; path = "Target Support Files/Pods-HowFastYouReactTests/Pods-HowFastYouReactTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D1AF364AA017970D9AB5B548 /* Pods_HowFastYouReact_HowFastYouReactUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HowFastYouReact_HowFastYouReactUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7E5FC7ADBCDB0DFAA73CE5F /* Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig"; path = "Target Support Files/Pods-HowFastYouReact-HowFastYouReactUITests/Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig"; sourceTree = "<group>"; };
-		F59D7BE9452FBAA7119E3A26 /* Pods_HowFastYouReactTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HowFastYouReactTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A57BBAA6D0C4D65C89EBDFEA /* Pods-HowFastYouReactTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReactTests.release.xcconfig"; path = "Target Support Files/Pods-HowFastYouReactTests/Pods-HowFastYouReactTests.release.xcconfig"; sourceTree = "<group>"; };
+		D41039D009356C2D7392018D /* Pods-HowFastYouReact-HowFastYouReactUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReact-HowFastYouReactUITests.debug.xcconfig"; path = "Target Support Files/Pods-HowFastYouReact-HowFastYouReactUITests/Pods-HowFastYouReact-HowFastYouReactUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F9F3AA3FC5581430FCD4F49 /* Pods_HowFastYouReact.framework in Frameworks */,
+				58117C959EB86BBC3DB04DD9 /* Pods_HowFastYouReact.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				891A3ED4C8C1C2EA7116F76A /* Pods_HowFastYouReactTests.framework in Frameworks */,
+				BE0FE1FC277AF7E3AF68E2F1 /* Pods_HowFastYouReactTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0493525A6EC670548647AF5F /* Pods_HowFastYouReact_HowFastYouReactUITests.framework in Frameworks */,
+				841655EEEFAE9B11BB38C7F3 /* Pods_HowFastYouReact_HowFastYouReactUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +167,7 @@
 				5EF3C1D629BEBC030033CF32 /* HowFastYouReactUITests */,
 				5EF3C1B429BEBBFB0033CF32 /* Products */,
 				6031D326F4985A5985466465 /* Pods */,
-				65FA344BE6E7700A1E5EFDBC /* Frameworks */,
+				D64C1410AF0601180B888A17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -303,22 +303,22 @@
 		6031D326F4985A5985466465 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0AA7F0FA46B3372771AEB501 /* Pods-HowFastYouReact.debug.xcconfig */,
-				9CAA5FFE9C83166DA4769895 /* Pods-HowFastYouReact.release.xcconfig */,
-				6B28191501666A002598A2EB /* Pods-HowFastYouReact-HowFastYouReactUITests.debug.xcconfig */,
-				E7E5FC7ADBCDB0DFAA73CE5F /* Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig */,
-				AEBCFF32E7814D55E5C8A896 /* Pods-HowFastYouReactTests.debug.xcconfig */,
-				5FABF905EA9CC89ABBAA0179 /* Pods-HowFastYouReactTests.release.xcconfig */,
+				442068AFCD8A3A28FDBE5BBE /* Pods-HowFastYouReact.debug.xcconfig */,
+				0B7A4CFD54146AE3F835A512 /* Pods-HowFastYouReact.release.xcconfig */,
+				D41039D009356C2D7392018D /* Pods-HowFastYouReact-HowFastYouReactUITests.debug.xcconfig */,
+				5DCCBE14B450B957043E0C58 /* Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig */,
+				6FBC9847F3427AF2C8F11D6F /* Pods-HowFastYouReactTests.debug.xcconfig */,
+				A57BBAA6D0C4D65C89EBDFEA /* Pods-HowFastYouReactTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		65FA344BE6E7700A1E5EFDBC /* Frameworks */ = {
+		D64C1410AF0601180B888A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				987115DB67A265B697DF5807 /* Pods_HowFastYouReact.framework */,
-				D1AF364AA017970D9AB5B548 /* Pods_HowFastYouReact_HowFastYouReactUITests.framework */,
-				F59D7BE9452FBAA7119E3A26 /* Pods_HowFastYouReactTests.framework */,
+				7C7D0C980054311283EDBC04 /* Pods_HowFastYouReact.framework */,
+				8318022AD69E89889B7BE11D /* Pods_HowFastYouReact_HowFastYouReactUITests.framework */,
+				6D9856AB7883FC4A3B7F0985 /* Pods_HowFastYouReactTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -330,11 +330,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EF3C1DD29BEBC030033CF32 /* Build configuration list for PBXNativeTarget "HowFastYouReact" */;
 			buildPhases = (
-				C37B0432523BAAA90F2D4488 /* [CP] Check Pods Manifest.lock */,
+				C0FEEEA9D94480332B13A0FA /* [CP] Check Pods Manifest.lock */,
 				5EF3C1AF29BEBBFB0033CF32 /* Sources */,
 				5EF3C1B029BEBBFB0033CF32 /* Frameworks */,
 				5EF3C1B129BEBBFB0033CF32 /* Resources */,
-				4641B7402FED501C4CD73527 /* [CP] Embed Pods Frameworks */,
+				D4EECFE8429654EBA5FC93CE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -349,7 +349,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EF3C1E029BEBC030033CF32 /* Build configuration list for PBXNativeTarget "HowFastYouReactTests" */;
 			buildPhases = (
-				DBCB0A5B94B65CCFECE0F75D /* [CP] Check Pods Manifest.lock */,
+				0FD0D63A70C0B9D9B317E6A8 /* [CP] Check Pods Manifest.lock */,
 				5EF3C1C529BEBC030033CF32 /* Sources */,
 				5EF3C1C629BEBC030033CF32 /* Frameworks */,
 				5EF3C1C729BEBC030033CF32 /* Resources */,
@@ -368,11 +368,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EF3C1E329BEBC030033CF32 /* Build configuration list for PBXNativeTarget "HowFastYouReactUITests" */;
 			buildPhases = (
-				FCA3C75479DAB776ACA5314A /* [CP] Check Pods Manifest.lock */,
+				F9EA97C0B5AB6503383213EE /* [CP] Check Pods Manifest.lock */,
 				5EF3C1CF29BEBC030033CF32 /* Sources */,
 				5EF3C1D029BEBC030033CF32 /* Frameworks */,
 				5EF3C1D129BEBC030033CF32 /* Resources */,
-				E6B857F4613C33D26D66C506 /* [CP] Embed Pods Frameworks */,
+				50FDD89E028F69EA20B729A5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -484,46 +484,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4641B7402FED501C4CD73527 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HowFastYouReact/Pods-HowFastYouReact-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HowFastYouReact/Pods-HowFastYouReact-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HowFastYouReact/Pods-HowFastYouReact-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C37B0432523BAAA90F2D4488 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HowFastYouReact-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DBCB0A5B94B65CCFECE0F75D /* [CP] Check Pods Manifest.lock */ = {
+		0FD0D63A70C0B9D9B317E6A8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -545,7 +506,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E6B857F4613C33D26D66C506 /* [CP] Embed Pods Frameworks */ = {
+		50FDD89E028F69EA20B729A5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -562,7 +523,46 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HowFastYouReact-HowFastYouReactUITests/Pods-HowFastYouReact-HowFastYouReactUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FCA3C75479DAB776ACA5314A /* [CP] Check Pods Manifest.lock */ = {
+		C0FEEEA9D94480332B13A0FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HowFastYouReact-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4EECFE8429654EBA5FC93CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HowFastYouReact/Pods-HowFastYouReact-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HowFastYouReact/Pods-HowFastYouReact-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HowFastYouReact/Pods-HowFastYouReact-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9EA97C0B5AB6503383213EE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -777,7 +777,7 @@
 		};
 		5EF3C1DE29BEBC030033CF32 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AA7F0FA46B3372771AEB501 /* Pods-HowFastYouReact.debug.xcconfig */;
+			baseConfigurationReference = 442068AFCD8A3A28FDBE5BBE /* Pods-HowFastYouReact.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -807,7 +807,7 @@
 		};
 		5EF3C1DF29BEBC030033CF32 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CAA5FFE9C83166DA4769895 /* Pods-HowFastYouReact.release.xcconfig */;
+			baseConfigurationReference = 0B7A4CFD54146AE3F835A512 /* Pods-HowFastYouReact.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -837,7 +837,7 @@
 		};
 		5EF3C1E129BEBC030033CF32 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AEBCFF32E7814D55E5C8A896 /* Pods-HowFastYouReactTests.debug.xcconfig */;
+			baseConfigurationReference = 6FBC9847F3427AF2C8F11D6F /* Pods-HowFastYouReactTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -858,7 +858,7 @@
 		};
 		5EF3C1E229BEBC030033CF32 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FABF905EA9CC89ABBAA0179 /* Pods-HowFastYouReactTests.release.xcconfig */;
+			baseConfigurationReference = A57BBAA6D0C4D65C89EBDFEA /* Pods-HowFastYouReactTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -879,7 +879,7 @@
 		};
 		5EF3C1E429BEBC030033CF32 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B28191501666A002598A2EB /* Pods-HowFastYouReact-HowFastYouReactUITests.debug.xcconfig */;
+			baseConfigurationReference = D41039D009356C2D7392018D /* Pods-HowFastYouReact-HowFastYouReactUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -898,7 +898,7 @@
 		};
 		5EF3C1E529BEBC030033CF32 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7E5FC7ADBCDB0DFAA73CE5F /* Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig */;
+			baseConfigurationReference = 5DCCBE14B450B957043E0C58 /* Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

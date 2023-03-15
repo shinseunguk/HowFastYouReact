@@ -13,13 +13,13 @@ import RxSwift
 import RxCocoa
 import GoogleMobileAds // TEST ID => ca-app-pub-3940256099942544/2934735716
 
-final class MainViewController: UIViewController, ViewAttribute {
+final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDelegate {
     let viewModel = MainViewModel()
     let disposeBag = DisposeBag()
     let fontManager = FontManager.shared
     
     let tapGesture = UITapGestureRecognizer()
-
+    
     var index = 1
     var backgroundColor: UIColor = .systemGray
     var reactBool = false
@@ -49,22 +49,28 @@ final class MainViewController: UIViewController, ViewAttribute {
         $0.textAlignment = .center
         $0.textColor = .white
     }
-    var bannerView : GADBannerView! //배너뷰 객체 생성
+    lazy var bannerView = GADBannerView().then {
+        
+        // TEST Key    ca-app-pub-3940256099942544/2934735716
+        // Release Key ca-app-pub-9690529790943099/3137915569
+        $0.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        $0.rootViewController = self
+        $0.load(GADRequest())
+        $0.delegate = self
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.navigationController?.isNavigationBarHidden = true
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUI()
         setAttributes()
         setUpControl()
-        
-        makeAndPresentBanner()
     }
     
     func setUI() {
@@ -103,9 +109,10 @@ final class MainViewController: UIViewController, ViewAttribute {
         }
         bannerView.snp.makeConstraints {
             
-            $0.bottom.left.equalTo(self.view.safeAreaLayoutGuide).offset(20)
+            $0.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-5)
+            $0.left.equalTo(self.view.safeAreaLayoutGuide).offset(20)
             $0.right.equalTo(self.view.safeAreaLayoutGuide).offset(-20)
-            $0.height.equalTo(50)
+            $0.height.equalTo(45)
         }
     }
     
@@ -186,16 +193,6 @@ final class MainViewController: UIViewController, ViewAttribute {
             })
             .disposed(by: disposeBag)
         
-    }
-    
-    func makeAndPresentBanner() {
-        // adSize의 인자값을 변경하여 노출될 광고배너 사이즈 조정 가능
-//        bannerView = GADBannerView(adSize: kGADAdSizeLargeBanner)
-//        addBannerViewToView(bannerView)
-        // 본인이 발급받은 광고단위ID 입력
-        bannerView.adUnitID = "ca-app-pub-9690529790943099/3137915569"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
     }
     
     func goNextPage() {
