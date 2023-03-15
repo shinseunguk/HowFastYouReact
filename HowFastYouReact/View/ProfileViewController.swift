@@ -23,7 +23,7 @@ final class ProfileViewController: UIViewController, ViewAttribute {
     
     lazy var descriptionLabel = UILabel().then {
         
-        $0.text = "추가적인 기능 요청 및 개선은 개발자 이메일을 통해 요청 해주시기 바랍니다.\n\n개발자 이메일 - ukseung.dev@gmail.com".localized()
+        $0.text = "추가적인 기능 요청 및 개선은 개발자 이메일을 통해 요청 해주시기 바랍니다.\n\n\n개발자 이메일 - ukseung.dev@gmail.com".localized()
         $0.font = fontManager.getFont(Font.Bold.rawValue).extraLargeFont
         $0.sizeToFit()
         $0.textAlignment = .natural

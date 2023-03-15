@@ -12,6 +12,7 @@ target 'HowFastYouReact' do
   pod 'Alamofire'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'Google-Mobile-Ads-SDK'
 
   target 'HowFastYouReactTests' do
     inherit! :search_paths

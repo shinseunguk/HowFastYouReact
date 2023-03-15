@@ -11,6 +11,7 @@ import Then
 import SnapKit
 import RxSwift
 import RxCocoa
+import GoogleMobileAds // TEST ID => ca-app-pub-3940256099942544/2934735716
 
 final class MainViewController: UIViewController, ViewAttribute {
     let viewModel = MainViewModel()
@@ -48,6 +49,7 @@ final class MainViewController: UIViewController, ViewAttribute {
         $0.textAlignment = .center
         $0.textColor = .white
     }
+    var bannerView : GADBannerView! //배너뷰 객체 생성
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -61,6 +63,8 @@ final class MainViewController: UIViewController, ViewAttribute {
         setUI()
         setAttributes()
         setUpControl()
+        
+        makeAndPresentBanner()
     }
     
     func setUI() {
@@ -70,6 +74,7 @@ final class MainViewController: UIViewController, ViewAttribute {
         self.fullCoverageButton.addSubview(questionMark)
         self.fullCoverageButton.addSubview(promptLabel)
         self.fullCoverageButton.addSubview(timerLabel)
+        self.fullCoverageButton.addSubview(bannerView)
     }
     
     func setAttributes() {
@@ -95,6 +100,12 @@ final class MainViewController: UIViewController, ViewAttribute {
         timerLabel.snp.makeConstraints {
             
             $0.centerX.centerY.equalToSuperview()
+        }
+        bannerView.snp.makeConstraints {
+            
+            $0.bottom.left.equalTo(self.view.safeAreaLayoutGuide).offset(20)
+            $0.right.equalTo(self.view.safeAreaLayoutGuide).offset(-20)
+            $0.height.equalTo(50)
         }
     }
     
@@ -175,6 +186,16 @@ final class MainViewController: UIViewController, ViewAttribute {
             })
             .disposed(by: disposeBag)
         
+    }
+    
+    func makeAndPresentBanner() {
+        // adSize의 인자값을 변경하여 노출될 광고배너 사이즈 조정 가능
+//        bannerView = GADBannerView(adSize: kGADAdSizeLargeBanner)
+//        addBannerViewToView(bannerView)
+        // 본인이 발급받은 광고단위ID 입력
+        bannerView.adUnitID = "ca-app-pub-9690529790943099/3137915569"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
     
     func goNextPage() {
