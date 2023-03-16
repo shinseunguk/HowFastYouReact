@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		58117C959EB86BBC3DB04DD9 /* Pods_HowFastYouReact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7D0C980054311283EDBC04 /* Pods_HowFastYouReact.framework */; };
+		5E1892CD29C2D9A800FBEF0D /* GameCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1892CC29C2D9A800FBEF0D /* GameCenterViewController.swift */; };
 		5EC7779129C0278C009B7E44 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EC7779329C0278C009B7E44 /* Localizable.strings */; };
 		5EC7779829C02818009B7E44 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC7779729C02818009B7E44 /* String+Extension.swift */; };
 		5EF3C1B729BEBBFB0033CF32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C1B629BEBBFB0033CF32 /* AppDelegate.swift */; };
@@ -77,6 +78,7 @@
 		0B7A4CFD54146AE3F835A512 /* Pods-HowFastYouReact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReact.release.xcconfig"; path = "Target Support Files/Pods-HowFastYouReact/Pods-HowFastYouReact.release.xcconfig"; sourceTree = "<group>"; };
 		442068AFCD8A3A28FDBE5BBE /* Pods-HowFastYouReact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReact.debug.xcconfig"; path = "Target Support Files/Pods-HowFastYouReact/Pods-HowFastYouReact.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCCBE14B450B957043E0C58 /* Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig"; path = "Target Support Files/Pods-HowFastYouReact-HowFastYouReactUITests/Pods-HowFastYouReact-HowFastYouReactUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5E1892CC29C2D9A800FBEF0D /* GameCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenterViewController.swift; sourceTree = "<group>"; };
 		5EC7779229C0278C009B7E44 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5EC7779429C027A2009B7E44 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5EC7779529C027AC009B7E44 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			children = (
 				5EF3C1BA29BEBBFB0033CF32 /* MainViewController.swift */,
 				A24BAC9C29C0A6D400D96AC1 /* ProfileViewController.swift */,
+				5E1892CC29C2D9A800FBEF0D /* GameCenterViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				5EC7779829C02818009B7E44 /* String+Extension.swift in Sources */,
 				5EF3C22729BEDDB80033CF32 /* MainViewModel.swift in Sources */,
 				5EF3C1BB29BEBBFB0033CF32 /* MainViewController.swift in Sources */,
+				5E1892CD29C2D9A800FBEF0D /* GameCenterViewController.swift in Sources */,
 				5EF3C1F029BEC14D0033CF32 /* LogHelper.swift in Sources */,
 				5EF3C1B729BEBBFB0033CF32 /* AppDelegate.swift in Sources */,
 				5EF3C1B929BEBBFB0033CF32 /* SceneDelegate.swift in Sources */,
@@ -710,7 +714,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -765,7 +769,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -791,7 +795,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -821,7 +825,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

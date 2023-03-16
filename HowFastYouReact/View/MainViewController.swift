@@ -18,7 +18,9 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
     let disposeBag = DisposeBag()
     let fontManager = FontManager.shared
     
-    let tapGesture = UITapGestureRecognizer()
+    let tapGesture1 = UITapGestureRecognizer()
+    let tapGesture2 = UITapGestureRecognizer()
+    
     
     var index = 1
     var backgroundColor: UIColor = .systemGray
@@ -30,7 +32,7 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
         $0.isUserInteractionEnabled = true
         $0.tintColor = .white
         $0.image = UIImage(systemName: "questionmark.app.fill")
-        $0.addGestureRecognizer(tapGesture)
+        $0.addGestureRecognizer(tapGesture1)
     }
     lazy var promptLabel = UILabel().then {
         
@@ -58,6 +60,15 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
         $0.load(GADRequest())
         $0.delegate = self
     }
+    lazy var trophyImageView = UIImageView().then {
+        
+        $0.contentMode = .scaleAspectFit
+        $0.isUserInteractionEnabled = true
+        $0.tintColor = .white
+        $0.image = UIImage(systemName: "trophy.fill")
+        $0.addGestureRecognizer(tapGesture2)
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -81,6 +92,7 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
         self.fullCoverageButton.addSubview(promptLabel)
         self.fullCoverageButton.addSubview(timerLabel)
         self.fullCoverageButton.addSubview(bannerView)
+        self.fullCoverageButton.addSubview(trophyImageView)
     }
     
     func setAttributes() {
@@ -114,6 +126,12 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
             $0.right.equalTo(self.view.safeAreaLayoutGuide).offset(-20)
             $0.height.equalTo(45)
         }
+        trophyImageView.snp.makeConstraints {
+            
+            $0.width.height.equalTo(70)
+            $0.right.equalTo(-20)
+            $0.bottom.equalTo(bannerView.snp.top).offset(-30)
+        }
     }
     
     func setUpControl() {
@@ -128,22 +146,26 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
                 case 1:
                     self?.promptLabel.text = "터치하여 테스트 시작!".localized()
                     self?.backgroundColor = .systemBlue
+                    self?.trophyImageView.alpha = 1.0
                     
                 case 2:
                     self?.viewModel.startTimer()
                     
                     self?.promptLabel.text = "화면이 녹색으로 변하면 터치해주세요".localized()
                     self?.backgroundColor = .systemOrange
+                    self?.trophyImageView.alpha = 0.0
                     
                 case 3:
                     self?.viewModel.stopWatchStart()
                     self?.backgroundColor = .systemGreen
+                    self?.trophyImageView.alpha = 0.0
                     
                 case 4:
                     self?.viewModel.stopTimer()
                     
                     self?.promptLabel.text = "화면이 녹색으로 변하면 터치해주세요\n터치하여 재시도".localized()
                     self?.backgroundColor = .systemRed
+                    self?.trophyImageView.alpha = 0.0
                     
                 default:
                     break
@@ -187,15 +209,32 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
             .disposed(by: disposeBag)
         
         // MARK: - 물음표 터치
-        tapGesture.rx.event
+        tapGesture1.rx.event
             .subscribe(onNext: { [weak self] _ in
-                self?.goNextPage()
+                self?.goNextPage("profile")
+            })
+            .disposed(by: disposeBag)
+        
+        // MARK: - 랭킹 터치
+        tapGesture2.rx.event
+            .subscribe(onNext: { [weak self] _ in
+                self?.goNextPage("rank")
             })
             .disposed(by: disposeBag)
         
     }
     
-    func goNextPage() {
-        self.navigationController?.pushViewController(ProfileViewController(), animated: true)
+    func goNextPage(_ handler: String) {
+        switch handler {
+        case "profile" :
+            self.navigationController?.pushViewController(ProfileViewController(), animated: true)
+
+        case "rank" :
+            self.navigationController?.pushViewController(GameCenterViewController(), animated: true)
+            break
+
+        default:
+            break
+        }
     }
 }
