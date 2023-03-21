@@ -113,6 +113,7 @@
 		8318022AD69E89889B7BE11D /* Pods_HowFastYouReact_HowFastYouReactUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HowFastYouReact_HowFastYouReactUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A24BAC9A29C0A58500D96AC1 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		A24BAC9C29C0A6D400D96AC1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A24BAC9E29C8118E00D96AC1 /* HowFastYouReact.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HowFastYouReact.entitlements; sourceTree = "<group>"; };
 		A57BBAA6D0C4D65C89EBDFEA /* Pods-HowFastYouReactTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReactTests.release.xcconfig"; path = "Target Support Files/Pods-HowFastYouReactTests/Pods-HowFastYouReactTests.release.xcconfig"; sourceTree = "<group>"; };
 		D41039D009356C2D7392018D /* Pods-HowFastYouReact-HowFastYouReactUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReact-HowFastYouReactUITests.debug.xcconfig"; path = "Target Support Files/Pods-HowFastYouReact-HowFastYouReactUITests/Pods-HowFastYouReact-HowFastYouReactUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +187,7 @@
 		5EF3C1B529BEBBFB0033CF32 /* HowFastYouReact */ = {
 			isa = PBXGroup;
 			children = (
+				A24BAC9E29C8118E00D96AC1 /* HowFastYouReact.entitlements */,
 				5EF3C1C429BEBC000033CF32 /* Info.plist */,
 				5EC7779629C02809009B7E44 /* Extension */,
 				5EF3C1EB29BEBFB50033CF32 /* Protocol */,
@@ -785,11 +787,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HowFastYouReact/HowFastYouReact.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2D8WKJP7C4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HowFastYouReact/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "HowFastYou?";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -801,7 +806,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.go.wetax.HowFastYouReact;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.go.HowFastYouReact;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -815,11 +820,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HowFastYouReact/HowFastYouReact.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2D8WKJP7C4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HowFastYouReact/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "HowFastYou?";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -831,7 +839,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.go.wetax.HowFastYouReact;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.go.HowFastYouReact;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

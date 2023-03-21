@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import GameKit
 
 final class GameCenterViewController: UIViewController, ViewAttribute {
     
