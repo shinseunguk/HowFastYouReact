@@ -12,7 +12,7 @@ import SnapKit
 import RxSwift
 import RxCocoa
 import GoogleMobileAds // TEST ID => ca-app-pub-3940256099942544/2934735716
-import GameKit
+//import GameKit
 
 final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDelegate {
     let viewModel = MainViewModel()
@@ -22,13 +22,13 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
     let tapGesture1 = UITapGestureRecognizer()
     let tapGesture2 = UITapGestureRecognizer()
 
-    lazy var leaderboard = GKLeaderboard().then {
-        $0.identifier = "Score_HowFastYou"
-        $0.timeScope = .allTime // or .today or .week
-        $0.playerScope = .global // or .friendsOnly
-        
-//        $0.range = NSMakeRange(1, 1000) // set the range (optional)
-    }
+//    lazy var leaderboard = GKLeaderboard().then {
+//        $0.identifier = "Score_HowFastYou"
+//        $0.timeScope = .allTime // or .today or .week
+//        $0.playerScope = .global // or .friendsOnly
+//
+////        $0.range = NSMakeRange(1, 1000) // set the range (optional)
+//    }
     
     var index = 1
     var backgroundColor: UIColor = .systemGray
@@ -91,7 +91,7 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
         setAttributes()
         setUpControl()
         
-        authLeaderBoard()
+//        authLeaderBoard()
     }
     
     func setUI() {
@@ -156,7 +156,7 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
                 case 1:
                     self?.promptLabel.text = "터치하여 테스트 시작!".localized()
                     self?.backgroundColor = .systemBlue
-                    self?.trophyImageView.alpha = 1.0
+                    self?.trophyImageView.alpha = 0.0 // 2차 배포 0.0 => 1.0
                     
                 case 2:
                     self?.viewModel.startTimer()
@@ -203,11 +203,11 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
                     self?.viewModel.stopWatchStop()
                     self?.timerLabel.alpha = 1.0
                     
-                    // MARK: - GameCenter 등록
-                    self?.viewModel.elapsedTime
-                        .subscribe(onNext: { scoreValue in
-                            self?.loadScores(reactScore: scoreValue)
-                        })
+                    // MARK: - GameCenter 등록 2차 배포
+//                    self?.viewModel.elapsedTime
+//                        .subscribe(onNext: { scoreValue in
+//                            self?.loadScores(reactScore: scoreValue)
+//                        })
                 case 4: // 실패화면(Red) -> 준비화면(Orange)
                     self?.viewModel.startReact.onNext(2)
                     
@@ -247,7 +247,7 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
 
         case "rank" :
 //            self.navigationController?.pushViewController(GameCenterViewController(), animated: true)
-            authLeaderBoard()
+//            authLeaderBoard()
             break
 
         default:
@@ -255,32 +255,32 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
         }
     }
     
-    func authLeaderBoard() {
-        traceLog("")
-        
-        GKLocalPlayer.local.authenticateHandler = { (viewController, error) in
-          if let error = error {
-            print("Authentication failed: \(error.localizedDescription)")
-          } else if let viewController = viewController {
-            // present the view controller to authenticate the player
-            self.present(viewController, animated: true, completion: nil)
-          } else {
-            print("Authentication succeeded!")
-          }
-        }
-    }
+//    func authLeaderBoard() {
+//        traceLog("")
+//
+//        GKLocalPlayer.local.authenticateHandler = { (viewController, error) in
+//          if let error = error {
+//            print("Authentication failed: \(error.localizedDescription)")
+//          } else if let viewController = viewController {
+//            // present the view controller to authenticate the player
+//            self.present(viewController, animated: true, completion: nil)
+//          } else {
+//            print("Authentication succeeded!")
+//          }
+//        }
+//    }
     
-    func loadScores(reactScore: Double) {
-        traceLog("\(reactScore)")
-        
-        let score = GKScore(leaderboardIdentifier: "Score_HowFastYou")
-        score.value = Int64(reactScore)
-        GKScore.report([score], withCompletionHandler: { (error) in
-          if let error = error {
-            print("Error submitting score: \(error.localizedDescription)")
-          } else {
-            print("Score submitted!")
-          }
-        })
-    }
+//    func loadScores(reactScore: Double) {
+//        traceLog("\(reactScore)")
+//
+//        let score = GKScore(leaderboardIdentifier: "Score_HowFastYou")
+//        score.value = Int64(reactScore)
+//        GKScore.report([score], withCompletionHandler: { (error) in
+//          if let error = error {
+//            print("Error submitting score: \(error.localizedDescription)")
+//          } else {
+//            print("Score submitted!")
+//          }
+//        })
+//    }
 }
