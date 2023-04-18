@@ -63,7 +63,7 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
         
         // TEST Key    ca-app-pub-3940256099942544/2934735716
         // Release Key ca-app-pub-9690529790943099/3137915569
-        $0.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        $0.adUnitID = "ca-app-pub-9690529790943099/3137915569"
         $0.rootViewController = self
         $0.load(GADRequest())
         $0.delegate = self
