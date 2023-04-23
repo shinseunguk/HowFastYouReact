@@ -11,7 +11,7 @@ import Then
 import SnapKit
 import RxSwift
 import RxCocoa
-import GoogleMobileAds // TEST ID => ca-app-pub-3940256099942544/2934735716
+import GoogleMobileAds
 //import GameKit
 
 final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDelegate {
@@ -60,7 +60,7 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
         $0.textColor = .white
     }
     lazy var bannerView = GADBannerView().then {
-        
+        $0.alpha = 0.0
         // TEST Key    ca-app-pub-3940256099942544/2934735716
         // Release Key ca-app-pub-9690529790943099/3137915569
         $0.adUnitID = "ca-app-pub-9690529790943099/3137915569"
