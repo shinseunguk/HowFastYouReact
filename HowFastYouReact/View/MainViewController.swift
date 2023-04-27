@@ -34,6 +34,8 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
     var backgroundColor: UIColor = .systemGray
     var reactBool = false
     
+    var totalScore: Double = 0.0
+    
     let fullCoverageButton = UIButton()
     lazy var questionMark = UIImageView().then {
         
@@ -209,6 +211,11 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
                     self?.viewModel.stopWatchReset()
                     self?.timerLabel.alpha = 0.0
                     
+                    // 3번 시도후 재시도..
+                    if self?.progressView.progress == 1.0 {
+                        self?.viewModel.progressStatus.accept(0.0)
+                    }
+                    
                 case 2: // 준비화면(Orange) -> 실패화면(Red)
                     self?.viewModel.startReact.onNext(4)
                     
@@ -217,6 +224,17 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
                     self?.viewModel.stopWatchStop()
                     self?.timerLabel.alpha = 1.0
                     
+                    self?.viewModel.progressBarStatus()
+                    
+                    self?.viewModel.elapsedTime
+                        .map {Double(String(format: "%.2f", $0*1000))!}
+                        .subscribe { value in
+                            guard let value = value.element, let newValue = self?.viewModel.totalScoreObserver.value else {return}
+                            traceLog(value)
+                            self?.viewModel.totalScoreObserver.accept(value)
+                            self?.totalScore += newValue
+                            traceLog(self?.totalScore)
+                    }
                     // MARK: - GameCenter 등록 2차 배포
 //                    self?.viewModel.elapsedTime
 //                        .subscribe(onNext: { scoreValue in
@@ -251,7 +269,11 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
                 self?.goNextPage("rank")
             })
             .disposed(by: disposeBag)
-        
+
+        // MARK: - progressView Status
+        viewModel.progressStatus
+            .bind(to: progressView.rx.progress)
+            .disposed(by: disposeBag)
     }
     
     func goNextPage(_ handler: String) {

@@ -20,7 +20,11 @@ final class MainViewModel {
     var startReact = BehaviorSubject<Int>(value: 1)
     let timerValue = BehaviorRelay<Int>(value: 1)
     
+    let progressStatus = BehaviorRelay<Float>(value: 0.0)
+    
     let elapsedTime = BehaviorRelay<Double>(value: 0.0)
+    
+    let totalScoreObserver = BehaviorRelay<Double>(value: 0.0)
     private var stopWatch: Disposable?
     private var timer: Disposable?
         
@@ -57,5 +61,30 @@ final class MainViewModel {
     func stopTimer() {
         timerValue.accept(1)
         timer?.dispose()
+    }
+    
+    func progressBarStatus() {
+        let index = progressStatus.value
+        
+        switch index {
+        case 0.0 :
+            traceLog("\(index)")
+            progressStatus.accept(0.3)
+            break
+        case 0.3 :
+            traceLog("\(index)")
+            progressStatus.accept(0.6)
+            break
+        case 0.6 :
+            traceLog("\(index)")
+            progressStatus.accept(1.0)
+            break
+        case 1.0 :
+            traceLog("\(index)")
+            progressStatus.accept(0.0)
+            break
+        default:
+            break
+        }
     }
 }

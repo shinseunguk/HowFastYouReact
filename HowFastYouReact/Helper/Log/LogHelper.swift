@@ -7,7 +7,7 @@
 
 import Foundation
 
-internal func traceLog(_ description: String,
+internal func traceLog(_ description: Any,
            fileName: String = #file,
            lineNumber: Int = #line,
            functionName: String = #function) {
