@@ -59,8 +59,14 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
         $0.textAlignment = .center
         $0.textColor = .white
     }
+    lazy var progressView = UIProgressView().then {
+        
+        $0.trackTintColor = .lightGray
+        $0.progressTintColor = .black
+        $0.progress = 0.0
+    }
     lazy var bannerView = GADBannerView().then {
-        $0.alpha = 0.0
+        
         // TEST Key    ca-app-pub-3940256099942544/2934735716
         // Release Key ca-app-pub-9690529790943099/3137915569
         $0.adUnitID = "ca-app-pub-9690529790943099/3137915569"
@@ -101,6 +107,7 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
         self.fullCoverageButton.addSubview(questionMark)
         self.fullCoverageButton.addSubview(promptLabel)
         self.fullCoverageButton.addSubview(timerLabel)
+        self.fullCoverageButton.addSubview(progressView)
         self.fullCoverageButton.addSubview(bannerView)
         self.fullCoverageButton.addSubview(trophyImageView)
     }
@@ -129,6 +136,13 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
             
             $0.centerX.centerY.equalToSuperview()
         }
+        progressView.snp.makeConstraints {
+            
+            $0.bottom.equalTo(bannerView.snp.top).offset(-15)
+            $0.left.equalTo(self.view.safeAreaLayoutGuide).offset(20)
+            $0.right.equalTo(self.view.safeAreaLayoutGuide).offset(-20)
+            $0.height.equalTo(10)
+        }
         bannerView.snp.makeConstraints {
             
             $0.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-5)
@@ -154,7 +168,7 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
                 
                 switch value {
                 case 1:
-                    self?.promptLabel.text = "터치하여 테스트 시작!".localized()
+                    self?.promptLabel.text = "터치하여 테스트 시작!\n3번의 반응속도를 체크하여 평균내요 😁".localized()
                     self?.backgroundColor = .systemBlue
                     self?.trophyImageView.alpha = 0.0 // 2차 배포 0.0 => 1.0
                     
