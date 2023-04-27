@@ -24,7 +24,7 @@ final class MainViewModel {
     
     let elapsedTime = BehaviorRelay<Double>(value: 0.0)
     
-    let totalScoreObserver = BehaviorRelay<Double>(value: 0.0)
+//    let totalScoreObserver = BehaviorRelay<Double>(value: 0.0)
     private var stopWatch: Disposable?
     private var timer: Disposable?
         

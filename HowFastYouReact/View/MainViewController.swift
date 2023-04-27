@@ -78,6 +78,7 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
     }
     lazy var trophyImageView = UIImageView().then {
         
+        $0.alpha = 0.0
         $0.contentMode = .scaleAspectFit
         $0.isUserInteractionEnabled = true
         $0.tintColor = .white
@@ -172,26 +173,26 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
                 case 1:
                     self?.promptLabel.text = "터치하여 테스트 시작!\n3번의 반응속도를 체크하여 평균내요 😁".localized()
                     self?.backgroundColor = .systemBlue
-                    self?.trophyImageView.alpha = 0.0 // 2차 배포 0.0 => 1.0
+//                    self?.trophyImageView.alpha = 0.0 // 2차 배포 0.0 => 1.0
                     
                 case 2:
                     self?.viewModel.startTimer()
                     
                     self?.promptLabel.text = "화면이 녹색으로 변하면 터치해주세요".localized()
                     self?.backgroundColor = .systemOrange
-                    self?.trophyImageView.alpha = 0.0
+//                    self?.trophyImageView.alpha = 0.0
                     
                 case 3:
                     self?.viewModel.stopWatchStart()
                     self?.backgroundColor = .systemGreen
-                    self?.trophyImageView.alpha = 0.0
+//                    self?.trophyImageView.alpha = 0.0
                     
                 case 4:
                     self?.viewModel.stopTimer()
                     
                     self?.promptLabel.text = "화면이 녹색으로 변하면 터치해주세요\n터치하여 재시도".localized()
                     self?.backgroundColor = .systemRed
-                    self?.trophyImageView.alpha = 0.0
+//                    self?.trophyImageView.alpha = 0.0
                     
                 default:
                     break
@@ -226,15 +227,11 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
                     
                     self?.viewModel.progressBarStatus()
                     
-                    self?.viewModel.elapsedTime
-                        .map {Double(String(format: "%.2f", $0*1000))!}
-                        .subscribe { value in
-                            guard let value = value.element, let newValue = self?.viewModel.totalScoreObserver.value else {return}
-                            traceLog(value)
-                            self?.viewModel.totalScoreObserver.accept(value)
-                            self?.totalScore += newValue
-                            traceLog(self?.totalScore)
-                    }
+                    guard let newValue = self?.viewModel.elapsedTime.value,
+                          let value = Double(String(format: "%.2f", newValue*1000)) else {return}
+                    
+                    self?.totalScore += value
+                    
                     // MARK: - GameCenter 등록 2차 배포
 //                    self?.viewModel.elapsedTime
 //                        .subscribe(onNext: { scoreValue in
