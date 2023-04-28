@@ -26,6 +26,9 @@
 		5EF3C22929BEDDB80033CF32 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C22629BEDDB80033CF32 /* MainViewModel.swift */; };
 		6F0E3D533F3F88B05672D5A5 /* Pods_HowFastYouReactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707DB81D5923AF2D711579EC /* Pods_HowFastYouReactTests.framework */; };
 		A24BAC9D29C0A6D400D96AC1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24BAC9C29C0A6D400D96AC1 /* ProfileViewController.swift */; };
+		AC8E7C6629FB669E006C15E0 /* NormalLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7C6529FB669E006C15E0 /* NormalLabel.swift */; };
+		AC8E7C6729FB669E006C15E0 /* NormalLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7C6529FB669E006C15E0 /* NormalLabel.swift */; };
+		AC8E7C6829FB669E006C15E0 /* NormalLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7C6529FB669E006C15E0 /* NormalLabel.swift */; };
 		ACB7970629EE47330040B549 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACB796FD29EE47320040B549 /* Pretendard-Regular.otf */; };
 		ACB7970729EE47330040B549 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACB796FD29EE47320040B549 /* Pretendard-Regular.otf */; };
 		ACB7970829EE47330040B549 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACB796FD29EE47320040B549 /* Pretendard-Regular.otf */; };
@@ -104,6 +107,7 @@
 		7DBC81E21993A2F5A8AE1BF3 /* Pods-HowFastYouReact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowFastYouReact.debug.xcconfig"; path = "Target Support Files/Pods-HowFastYouReact/Pods-HowFastYouReact.debug.xcconfig"; sourceTree = "<group>"; };
 		A24BAC9C29C0A6D400D96AC1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A24BAC9E29C8118E00D96AC1 /* HowFastYouReact.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HowFastYouReact.entitlements; sourceTree = "<group>"; };
+		AC8E7C6529FB669E006C15E0 /* NormalLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalLabel.swift; sourceTree = "<group>"; };
 		ACB796FD29EE47320040B549 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		ACB796FE29EE47330040B549 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		ACB796FF29EE47330040B549 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
@@ -251,6 +255,7 @@
 				5EF3C1BA29BEBBFB0033CF32 /* MainViewController.swift */,
 				A24BAC9C29C0A6D400D96AC1 /* ProfileViewController.swift */,
 				5E1892CC29C2D9A800FBEF0D /* GameCenterViewController.swift */,
+				AC8E7C6529FB669E006C15E0 /* NormalLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -605,6 +610,7 @@
 				5E1892CD29C2D9A800FBEF0D /* GameCenterViewController.swift in Sources */,
 				5EF3C1F029BEC14D0033CF32 /* LogHelper.swift in Sources */,
 				5EF3C1B729BEBBFB0033CF32 /* AppDelegate.swift in Sources */,
+				AC8E7C6629FB669E006C15E0 /* NormalLabel.swift in Sources */,
 				5EF3C1B929BEBBFB0033CF32 /* SceneDelegate.swift in Sources */,
 				A24BAC9D29C0A6D400D96AC1 /* ProfileViewController.swift in Sources */,
 				5EF3C1ED29BEBFBE0033CF32 /* Protocol.swift in Sources */,
@@ -616,6 +622,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EF3C1CE29BEBC030033CF32 /* HowFastYouReactTests.swift in Sources */,
+				AC8E7C6729FB669E006C15E0 /* NormalLabel.swift in Sources */,
 				ACB7972329EE47390040B549 /* FontManager.swift in Sources */,
 				5EF3C22829BEDDB80033CF32 /* MainViewModel.swift in Sources */,
 			);
@@ -629,6 +636,7 @@
 				5EF3C1DA29BEBC030033CF32 /* HowFastYouReactUITestsLaunchTests.swift in Sources */,
 				ACB7972429EE47390040B549 /* FontManager.swift in Sources */,
 				5EF3C22929BEDDB80033CF32 /* MainViewModel.swift in Sources */,
+				AC8E7C6829FB669E006C15E0 /* NormalLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

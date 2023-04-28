@@ -85,7 +85,17 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
         $0.image = UIImage(systemName: "trophy.fill")
         $0.addGestureRecognizer(tapGesture2)
     }
-    
+//    lazy var scoreFirst = UILabel().then {
+//
+//        $0.text = "1"
+//        $0.sizeToFit()
+//        $0.font = fontManager.getFont(Font.Bold.rawValue).small11Font
+//        $0.backgroundColor = .black
+//        $0.textColor = .white
+//    }
+    lazy var scoreFirst = NormalLabel()
+    lazy var scoreSecond = NormalLabel()
+    lazy var scoreThird = NormalLabel()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -113,6 +123,10 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
         self.fullCoverageButton.addSubview(progressView)
         self.fullCoverageButton.addSubview(bannerView)
         self.fullCoverageButton.addSubview(trophyImageView)
+        
+        self.fullCoverageButton.addSubview(scoreFirst)
+        self.fullCoverageButton.addSubview(scoreSecond)
+        self.fullCoverageButton.addSubview(scoreThird)
     }
     
     func setAttributes() {
@@ -159,6 +173,21 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
             $0.right.equalTo(-20)
             $0.bottom.equalTo(bannerView.snp.top).offset(-30)
         }
+        scoreFirst.snp.makeConstraints {
+            
+            $0.left.equalTo(scoreThird.snp.left)
+            $0.bottom.equalTo(scoreSecond.snp.top).offset(-15)
+        }
+        scoreSecond.snp.makeConstraints {
+            
+            $0.left.equalTo(scoreThird.snp.left)
+            $0.bottom.equalTo(scoreThird.snp.top).offset(-15)
+        }
+        scoreThird.snp.makeConstraints {
+            
+            $0.left.equalTo(20)
+            $0.bottom.equalTo(progressView.snp.top).offset(-30)
+        }
     }
     
     func setUpControl() {
@@ -171,9 +200,32 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
                 
                 switch value {
                 case 1:
-                    self?.promptLabel.text = "터치하여 테스트 시작!\n3번의 반응속도를 체크하여 평균내요 😁".localized()
                     self?.backgroundColor = .systemBlue
 //                    self?.trophyImageView.alpha = 0.0 // 2차 배포 0.0 => 1.0
+                    
+                    let progressIndex = self?.viewModel.progressStatus.value
+                    switch progressIndex {
+                    case 0.0:
+                        self?.promptLabel.text = "터치하여 테스트 시작!\n3번의 반응속도를 체크하여 평균내요 😁".localized()
+                        break
+                    case 0.3:
+                        self?.promptLabel.text = "터치하여 두번째 테스트 시작!\n두번 남았어요 😉".localized()
+                        break
+                    case 0.6:
+                        self?.promptLabel.text = "터치하여 세번째 테스트 시작!\n마지막 테스트에요 🥺".localized()
+                        traceLog("3")
+                        break
+                    case 1.0:
+                        self?.promptLabel.text = "테스트 종료\n반응속도의 평균입니다\n테스트를 다시하려면 터치하여 시작하세요".localized()
+                        self?.timerLabel.text = "평균 : \(String(format: "%.2f", self!.totalScore / 3.0))ms"
+                        traceLog("4")
+                        
+                        // totalScore 초기화
+                        self?.totalScore = 0.0
+                        break
+                    default:
+                        break
+                    }
                     
                 case 2:
                     self?.viewModel.startTimer()
@@ -221,11 +273,11 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
                     self?.viewModel.startReact.onNext(4)
                     
                 case 3: // 지금부터 측정(Green)
-                    self?.viewModel.startReact.onNext(1)
                     self?.viewModel.stopWatchStop()
                     self?.timerLabel.alpha = 1.0
                     
                     self?.viewModel.progressBarStatus()
+                    self?.viewModel.startReact.onNext(1)
                     
                     guard let newValue = self?.viewModel.elapsedTime.value,
                           let value = Double(String(format: "%.2f", newValue*1000)) else {return}
@@ -269,7 +321,14 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
 
         // MARK: - progressView Status
         viewModel.progressStatus
-            .bind(to: progressView.rx.progress)
+            .subscribe(onNext: { [weak self] value in
+                guard let self = self else { return }
+                
+                UIView.animate(withDuration: 1.0, animations: {
+                    self.progressView.setProgress(value, animated: true)
+                    
+                })
+            })
             .disposed(by: disposeBag)
     }
     
