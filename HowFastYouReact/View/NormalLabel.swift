@@ -29,7 +29,6 @@ class NormalLabel: UILabel {
         self.alpha = 0.0
         self.text = "2"
         self.textColor = .white
-        self.backgroundColor = .black
         self.font = fontManager.getFont(Font.Bold.rawValue).extraLargeFont
     }
 }

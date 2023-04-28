@@ -155,7 +155,7 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
         }
         progressView.snp.makeConstraints {
             
-            $0.bottom.equalTo(bannerView.snp.top).offset(-15)
+            $0.bottom.equalTo(bannerView.snp.top).offset(-20)
             $0.left.equalTo(self.view.safeAreaLayoutGuide).offset(20)
             $0.right.equalTo(self.view.safeAreaLayoutGuide).offset(-20)
             $0.height.equalTo(10)
@@ -185,8 +185,8 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
         }
         scoreThird.snp.makeConstraints {
             
-            $0.left.equalTo(20)
-            $0.bottom.equalTo(progressView.snp.top).offset(-30)
+            $0.left.equalTo(40)
+            $0.bottom.equalTo(progressView.snp.top).offset(-50)
         }
     }
     
@@ -216,7 +216,7 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
                         traceLog("3")
                         break
                     case 1.0:
-                        self?.promptLabel.text = "테스트 종료\n반응속도의 평균입니다\n테스트를 다시하려면 터치하여 시작하세요".localized()
+                        self?.promptLabel.text = "테스트 종료\n테스트를 다시하려면 터치하여 시작하세요 😖".localized()
                         self?.timerLabel.text = "평균 : \(String(format: "%.2f", self!.totalScore / 3.0))ms"
                         traceLog("4")
                         
@@ -267,6 +267,10 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
                     // 3번 시도후 재시도..
                     if self?.progressView.progress == 1.0 {
                         self?.viewModel.progressStatus.accept(0.0)
+                        
+                        _ = [self?.scoreFirst, self?.scoreSecond, self?.scoreThird].map {
+                            $0?.alpha = 0.0
+                        }
                     }
                     
                 case 2: // 준비화면(Orange) -> 실패화면(Red)
@@ -277,13 +281,33 @@ final class MainViewController: UIViewController, ViewAttribute, GADBannerViewDe
                     self?.timerLabel.alpha = 1.0
                     
                     self?.viewModel.progressBarStatus()
-                    self?.viewModel.startReact.onNext(1)
                     
                     guard let newValue = self?.viewModel.elapsedTime.value,
                           let value = Double(String(format: "%.2f", newValue*1000)) else {return}
                     
                     self?.totalScore += value
                     
+                    let progressIndex = self?.viewModel.progressStatus.value
+                    switch progressIndex {
+                    case 0.0:
+                        break
+                    case 0.3:
+                        self?.scoreFirst.alpha = 1.0
+                        self?.scoreFirst.text = "1  =>  \(String(value))"
+                        break
+                    case 0.6:
+                        self?.scoreSecond.alpha = 1.0
+                        self?.scoreSecond.text = "2  =>  \(String(value))"
+                        break
+                    case 1.0:
+                        self?.scoreThird.alpha = 1.0
+                        self?.scoreThird.text = "3  =>  \(String(value))"
+                        break
+                    default:
+                        break
+                    }
+                    
+                    self?.viewModel.startReact.onNext(1)
                     // MARK: - GameCenter 등록 2차 배포
 //                    self?.viewModel.elapsedTime
 //                        .subscribe(onNext: { scoreValue in
